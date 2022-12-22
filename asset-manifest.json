@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/javalis/static/css/main.811750d0.css",
+    "main.js": "/javalis/static/js/main.a683b3fc.js",
+    "static/js/787.a59bd999.chunk.js": "/javalis/static/js/787.a59bd999.chunk.js",
+    "index.html": "/javalis/index.html",
+    "main.811750d0.css.map": "/javalis/static/css/main.811750d0.css.map",
+    "main.a683b3fc.js.map": "/javalis/static/js/main.a683b3fc.js.map",
+    "787.a59bd999.chunk.js.map": "/javalis/static/js/787.a59bd999.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.811750d0.css",
+    "static/js/main.a683b3fc.js"
+  ]
+}
