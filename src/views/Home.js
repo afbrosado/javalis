@@ -9,7 +9,7 @@ const Home = props => {
   return (
     <>
       <Grid item xs={12} style={{textAlign: "center"}}>
-        <img src="/imgs/javalis_dourados.jpg" alt="Logo javalis" width={150} height={150}/>
+        <img src="https://imgur.com/jSrp1VO" alt="Logo javalis" width={150} height={150}/>
         <Typography variant="h4" style={{marginTop: 10, fontWeight: "bold"}}>
           Bem vindo JAVALI
         </Typography>
