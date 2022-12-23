@@ -1,15 +1,34 @@
 import React, {useState} from "react";
-import {FormControl, FormControlLabel, Grid, RadioGroup, Typography, Radio, Button} from "@mui/material";
+import {
+  FormControl,
+  FormControlLabel,
+  Grid,
+  RadioGroup,
+  Typography,
+  Radio,
+  Button,
+  Dialog,
+  DialogContent, DialogActions
+} from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Header from "./Header";
 import {JAVALIS} from "../utils/javalisList";
+import {useSelector} from "react-redux";
 
 const JavaliId = props => {
+  const {votes} = useSelector(state => state.voters);
 
   const {setStep, setVoter, voter} = props;
 
+  const [modal, setModal] = useState(false);
+
   const handleChange = e => {
-    setVoter(e.target.value)
+    let _voter = votes.find(v => Number(v.id) === Number(e.target.value));
+    if (_voter.president || _voter.joty) {
+      setModal(true);
+    } else {
+      setVoter(e.target.value)
+    }
   };
 
   const handleNextClick = () => {
@@ -48,6 +67,16 @@ const JavaliId = props => {
           </Button>
         </div>
       </Grid>
+      <Dialog open={modal} onClose={() => setModal(false)}>
+        <DialogContent>
+          <Typography variant="h5">Já votaste Zeca!</Typography>
+        </DialogContent>
+        <DialogActions style={{padding: 20}}>
+          <Button onClick={() => setModal(false)}>
+            Fechar
+          </Button>
+        </DialogActions>
+      </Dialog>
     </>
   );
 };

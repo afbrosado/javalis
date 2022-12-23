@@ -14,6 +14,7 @@ function App() {
   const [president, setPresident] = useState(0);
   const [joty, setJoty] = useState(0);
 
+
   return (
     <Grid container direction="row" justifyContent="center" style={{marginTop: 50, height: "100%", paddingLeft: 10, paddingRight: 10, position: "relative"}}>
       {step === 0 && <Home setStep={setStep}/>}
